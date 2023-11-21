@@ -3,26 +3,26 @@ import './App.css';
 
 function AppJSX() {
   const name = '404';
-  const blacklist = ['베르무트','버본','진','큐라소']; 
+  const blacklist = ['베르무트', '버본', '진', '큐라소'];
   return (
     <>
-        <h1 className='aqua'>Hello!</h1>
-        <h1 className='aqua'>{`Hello!Dev_ ${name}`}</h1>
-        <h2>Hello!!</h2>
-        <p>{name}</p> 
-        <ul>
-          <li>베르무트</li>
-          <li>버본</li>
-          <li>진</li>
-        </ul>
-        <ul>
-          {
-            blacklist.map((item) => (
-              <li>{item}</li>
-            ))
-          }
-          { blacklist.map((item) =>{return <li>{item}</li>})}
-        </ul>
+      <h1 className='aqua'>Hello!</h1>
+      <h1 className='aqua'>{`Hello!Dev_ ${name}`}</h1>
+      <h2>Hello!!</h2>
+      <p>{name}</p>
+      <ul>
+        <li>베르무트</li>
+        <li>버본</li>
+        <li>진</li>
+      </ul>
+      <ul>
+        {
+          blacklist.map((item) => (
+            <li>{item}</li>
+          ))
+        }
+        {blacklist.map((item) => { return <li>{item}</li> })}
+      </ul>
     </>
 
   );
@@ -40,4 +40,20 @@ export default AppJSX;
   React는 자바스크립트 Library
 
   .map() , 화살표함수 등 기존 자바스크립트 문법은 익혀둬야 한다.
+*/
+/*
+  <ul>
+    {
+      blacklist.map((item) => (
+        <li>{item}</li>
+      ))
+    }
+    { blacklist.map((item) =>{return <li>{item}</li>})}
+  </ul>
+  중괄호 사용시에는 꼭 return 을 명시 해준다. 
+  {
+    blacklist.map(function(item)=>{
+      return <li>{item}</li>
+    })
+  } 화살표함수 사용 안 할 시 이렇게 작성
 */
