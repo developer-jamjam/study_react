@@ -5,7 +5,7 @@ import Counter from './components/Counter';
 export default function AppCounter() {
   const [count, setCount] = useState(0);
   const handleClick = () => {
-    setCount((prev)=>prev + 1);
+    setCount((prev) => prev + 1);
   }
   return (
     <div className='container'>
@@ -19,3 +19,9 @@ export default function AppCounter() {
     </div>
   );
 }
+
+/*
+  연결하고 싶을때는 함수의 참조값인 함수의 이름을 전달해야한다. 
+  함수를 호출하면 X 
+  https://legacy.reactjs.org/docs/handling-events.html
+ */
